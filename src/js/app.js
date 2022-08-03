@@ -33,9 +33,6 @@ function render(variables = {}) {
   if (variables.role == null) variables.role = "Student in 4Geeks";
   if (variables.country == null) variables.country = "Chile";
   if (variables.city == null) variables.city = "Santiago";
-  if (variables.linkedin == null) variables.linkedin = "https://linkedin.com/";
-  if (variables.github == null) variables.github = "https://github.com/";
-  if (variables.instagram == null) variables.instagram = "https://instagram/";
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -44,10 +41,10 @@ function render(variables = {}) {
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="${variables.twitter}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="${variables.github}" target="_blank"><i class="fa fa-github"></i></a></li>
-            <li><a href="${variables.linkedin}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="${variables.instagram}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${variables.twitter}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://Github.com/${variables.github}" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/${variables.linkedin}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://Instagram.com/${variables.instagram}" target="_blank"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -68,7 +65,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
